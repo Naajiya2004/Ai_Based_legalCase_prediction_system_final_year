@@ -1,0 +1,46 @@
+.toggle-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px;
+  background: transparent;   /* NO OUTER BOX */
+}
+
+/* Toggle buttons */
+.toggle-container button {
+  position: relative;
+  z-index: 2;
+  border: none;              /* ❌ REMOVE BORDER */
+  outline: none;             /* ❌ REMOVE OUTLINE */
+  box-shadow: none;          /* ❌ REMOVE SHADOW */
+  background: transparent;   /* ❌ REMOVE BUTTON BG */
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #555;
+}
+
+/* Active text color */
+.toggle-container button.active {
+  color: #fff;
+}
+
+/* SLIDING BLUE PILL */
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(135deg, #5b5cf6, #6c6cff);
+  border-radius: 999px;
+  transition: transform 0.35s ease-in-out;
+  z-index: 1;
+}
+
+/* Move pill to GenAI */
+.slider.genai {
+  transform: translateX(100%);
+}
